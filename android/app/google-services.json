@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "985413801317",
+    "firebase_url": "https://flexxbet-default-rtdb.firebaseio.com",
+    "project_id": "flexxbet",
+    "storage_bucket": "flexxbet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985413801317:android:0b0b1942470bfd9a1c3d8c",
+        "android_client_info": {
+          "package_name": "com.flexxbet.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985413801317-6beg9k9obo9ivnrfdtnnl8e97nh066cq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flexxbet.app",
+            "certificate_hash": "932f64d91689ab69c64f4e1e65bf8646bda41c82"
+          }
+        },
+        {
+          "client_id": "985413801317-75be97u8j5bleo0tahq4difmi1s3bkie.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flexxbet.app",
+            "certificate_hash": "e8972dee28df1f9b333205ba41ac53f87a63e756"
+          }
+        },
+        {
+          "client_id": "985413801317-ipdt7i5m0ito4idq6f95m2f9lt0043im.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flexxbet.app",
+            "certificate_hash": "12243165d10c25db0a3186634b42087cc6babbd4"
+          }
+        },
+        {
+          "client_id": "985413801317-9d47ljng1a8es6fpb20jmcqah1nr2tpf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9F1-aaaufqQEeg2LQXjwEk0kSPRk_s_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985413801317-9d47ljng1a8es6fpb20jmcqah1nr2tpf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "985413801317-19ed831jq3nh2kcad77lrkd9ajai38s2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flexxBet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

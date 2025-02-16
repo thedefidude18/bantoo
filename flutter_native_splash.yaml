@@ -1,0 +1,13 @@
+flutter_native_splash:
+  color: '#7440FF'
+  image: assets/images/flexx_bet_logo.png
+  image_android: assets/images/flexx_bet_logo.png
+  image_dark_android: assets/images/flexx_bet_logo.png
+  color_android: '#7440FF'
+  color_dark: '#7440FF'
+  color_dark_android: '#7440FF'
+  ios: true
+  android: true
+  android_12:
+    image: assets/images/flexx_bet_logo_twelve.png
+    color: '#7440FF'
