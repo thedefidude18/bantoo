@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 // SegmentSelector class with a generic type parameter T
-class SegmentedSelector<T> extends StatelessWidget {
+class SegmentedSelector<T extends Object> extends StatelessWidget {
   const SegmentedSelector({
     super.key,
     required this.menuOptions,
@@ -9,7 +9,8 @@ class SegmentedSelector<T> extends StatelessWidget {
     required this.onValueChanged,
   });
 
-  final Map<T, MapEntry<Icon, String>> menuOptions; // Change to Map<T, MapEntry<Icon, String>>
+  final Map<T, MapEntry<Icon, String>>
+      menuOptions; // Change to Map<T, MapEntry<Icon, String>>
   final T selectedOption; // Change to T
   final ValueChanged<T?> onValueChanged; // Change to ValueChanged<T?>
 
