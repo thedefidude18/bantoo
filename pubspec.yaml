@@ -13,16 +13,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  # Downgrade share_plus to be compatible with share_screenshot_widget
-  share_plus: ^6.3.4
-  
   # Use wakelock instead of wakelock_plus
   wakelock: ^0.6.2
-  
-  # Keep share_screenshot_widget
+  share_plus: ^6.3.4
   share_screenshot_widget: ^0.0.5
-  
-  # Rest of your dependencies remain the same
   carousel_slider: ^5.0.0
   flutter_local_notifications: ^15.0.0
   get: ^4.6.5
