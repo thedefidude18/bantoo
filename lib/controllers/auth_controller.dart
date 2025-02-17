@@ -288,21 +288,45 @@ class AuthController extends GetxController {
   //Method to handle user sign in using email and password
   Future signInUserWithEmailAndPassword() async {
     Get.log("signInUserWithEmailAndPassword");
-    showLoader(() async {
-      firstTimeUser = false;
-      try {
-        await _auth.signInWithEmailAndPassword(
+    try {
+      await showLoader(() async {
+        firstTimeUser = false;
+        try {
+          await _auth.signInWithEmailAndPassword(
             email: emailController.text.trim(),
-            password: passwordController.text.trim());
-      } catch (error) {
-        Get.log(error.toString(), isError: true);
-        Get.snackbar('auth.signInErrorTitle'.tr, 'auth.signInError'.tr,
+            password: passwordController.text.trim(),
+          );
+        } on FirebaseAuthException catch (error) {
+          Get.log(error.toString(), isError: true);
+          String errorMessage = 'auth.signInError'.tr;
+
+          // Handle specific Firebase error codes
+          switch (error.code) {
+            case 'user-not-found':
+              errorMessage = 'No user found with this email';
+              break;
+            case 'wrong-password':
+              errorMessage = 'Invalid password';
+              break;
+            case 'invalid-email':
+              errorMessage = 'Invalid email format';
+              break;
+          }
+
+          Get.snackbar(
+            'auth.signInErrorTitle'.tr,
+            errorMessage,
             snackPosition: SnackPosition.BOTTOM,
             duration: const Duration(seconds: 7),
             backgroundColor: Get.theme.snackBarTheme.backgroundColor,
-            colorText: Get.theme.snackBarTheme.actionTextColor);
-      }
-    });
+            colorText: Get.theme.snackBarTheme.actionTextColor,
+          );
+        }
+      });
+    } catch (e) {
+      Get.log('Unexpected error during sign in: ${e.toString()}',
+          isError: true);
+    }
   }
 
   Future registerOrSignInUserWithGoogle() async {

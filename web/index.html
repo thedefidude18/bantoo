@@ -7,7 +7,7 @@
   <meta name="description" content="A new Flutter project.">
   
   <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes"> <!-- Updated meta tag -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="flexx_bet">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -20,29 +20,26 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
+    const serviceWorkerVersion = null;
   </script>
-  <script src="flutter.js" defer></script> <!-- Ensure this is included -->
-  <style id="splash-screen-style">
-    /* Your existing styles */
-  </style>
-  <script id="splash-screen-script">
-    function removeSplashFromWeb() {
-      document.getElementById("splash")?.remove();
-      document.getElementById("splash-branding")?.remove();
-      document.body.style.background = "transparent";
-    }
-  </script>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-  <picture id="splash">
-    <!-- Your existing splash image logic -->
-  </picture>
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
-      _flutter.loader.load({
+      _flutter = {
+        loader: {
+          file: "main.dart.js",
+          serviceWorker: {
+            serviceWorkerVersion: serviceWorkerVersion,
+          }
+        }
+      };
+      
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },

@@ -13,14 +13,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  # Remove wakelock_plus
-  # wakelock_plus: ^1.1.1
+  # Downgrade share_plus to be compatible with share_screenshot_widget
+  share_plus: ^6.3.4
   
-  # Update share_plus to latest version
-  share_plus: 6.3.4
-  
-  # Add this instead of wakelock_plus
+  # Use wakelock instead of wakelock_plus
   wakelock: ^0.6.2
+  
+  # Keep share_screenshot_widget
+  share_screenshot_widget: ^0.0.5
   
   # Rest of your dependencies remain the same
   carousel_slider: ^5.0.0
@@ -80,7 +80,6 @@ dependencies:
   country_picker: ^2.0.23
   firebase_messaging: ^15.2.0
   fluttertoast: ^8.2.4 
-  share_screenshot_widget: ^0.0.5
   path_provider: ^2.1.2
   gradient_borders: ^1.0.0
   simple_gradient_text: ^1.3.0

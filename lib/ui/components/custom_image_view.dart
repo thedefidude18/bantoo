@@ -84,7 +84,6 @@ class CustomImageView extends StatelessWidget {
     );
   }
 
-
   ///build the image with border and border radius style
   _buildImageWithBorder() {
     if (border != null) {
