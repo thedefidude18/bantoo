@@ -61,16 +61,16 @@ Obx? buildBottomNavigationMenu(context, [String? img]) {
                 //     width: 18,
                 //     imagePath: ImageConstant.homeIcon1),
                 customNavigationBarItem(
-                    label: "Games",
-                    width: 30,
-                    height: 30,
-                    imagePath: ImageConstant.activeBetIcon,
-                    isBagedIcon: true),
-                customNavigationBarItem(
                     width: 35,
                     height: 35,
                     label: "Events",
                     imagePath: ImageConstant.event_icon,
+                    isBagedIcon: true),
+                customNavigationBarItem(
+                    label: "Games",
+                    width: 30,
+                    height: 30,
+                    imagePath: ImageConstant.activeBetIcon,
                     isBagedIcon: true),
                 customNavigationBarItem(
                   label: "",

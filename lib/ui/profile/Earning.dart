@@ -241,7 +241,7 @@ class _EarningScreenState extends State<EarningScreen>
         centerTitle: true,
         toolbarHeight: 80,
         title: const Text(
-          "My Events",
+          "Earnings",
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
