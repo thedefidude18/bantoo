@@ -79,7 +79,7 @@ Obx? buildBottomNavigationMenu(context, [String? img]) {
                   width: 49,
                 ),
                 customNavigationBarItem(
-                  label: "MyEvents",
+                  label: "My Events",
                   imagePath: ImageConstant.activeRankIcon,
                   height: 30,
                   width: 30,
