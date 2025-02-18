@@ -11,9 +11,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
-        android:label="Bantah"
+        android:label="flexx_bet"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <package android:name="com.flexxbet.app" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
